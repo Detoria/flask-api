@@ -10,9 +10,7 @@ def register_plugin(app):
     from app.models.base import db
     db.init_app(app)
     with app.app_context():
-        db,create_all()
-
-
+        db.create_all()
 
 def create_app():
     app = Flask(__name__)
